@@ -117,8 +117,8 @@ namespace HelloWorld
             // インクリメント デクリメント
 
             // 前置きインクリメント
-            int i = 0;
-            int i2 = ++i; // i2 は 1, i も1 になる
+            int i0 = 0;
+            int i2 = ++i0; // i2 は 1, i0 も1 になる
 
             // 後置きインクリメント
             int i3 = 0;
@@ -131,6 +131,10 @@ namespace HelloWorld
             // 後置きデクリメント
             int i7 = 0;
             int i8 = i7--; // i8は-1,i7 は 0 になる
+
+            // 複合代入
+            // += -= *= /= &= |= ^= 
+            // a += 1 は aに+1したものが代入される。他も同じ
 
 
             Console.WriteLine("Program end.");
