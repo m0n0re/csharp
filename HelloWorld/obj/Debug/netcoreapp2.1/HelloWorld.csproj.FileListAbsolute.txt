@@ -9,3 +9,5 @@ F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.AssemblyInfoInp
 F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.AssemblyInfo.cs
 F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.dll
 F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.pdb
+F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.csproj.AssemblyReference.cache
+F:\data\dev\csharp\HelloWorld\obj\Debug\netcoreapp2.1\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig

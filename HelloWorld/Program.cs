@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace HelloWorld
@@ -60,6 +61,58 @@ namespace HelloWorld
             string tStr2 = "\""; // ダブルクォーテーション
             string tStr3 = "\\"; // バックスラッシュを文字列として使う
 
+
+            // 数字
+            // 数字区切り文字 アンダーバーで数値を区切れる
+            var million = 1_000_000;
+            var kugiri1 = 1.123_456_789;
+
+            // 文字列
+            // 文字列補間
+            var formatted = string.Format("({0},{1})", "a", "b");
+            // ↑ めんどい！
+            // ↓ Format用専用構文が追加された！補間文字列(or文字列補間)という。
+            var formatted2 = $"{tStr2},{tStr3}";
+
+            // 補完文字列は書式指定もできる
+            var formatted3 = $"({12300:c}, {12300:n}, {12300,4:x})"; // → (¥12,300, 12,300.00, 300c)
+
+            Console.WriteLine(formatted3);
+
+            // 補完文字列は色々な式が書ける
+            var data = new[] { 1, 2, 3 };
+            var s = $"{string.Join(", ", data)} => {string.Join(", ", data.Select(i => i * i))}";
+
+            // string.Join(", ", data) は data 配列の中身を , で結合して出力
+            // string.Join(", ", data.Select(i => i * i)) は 配列の中身を取り出して i とする。 i * i の結果を出力する
+            Console.WriteLine(s); // 1, 2, 3 => 1, 4, 9 という文字列が出力
+
+            // $@と書くことで複数行の補完文字列にすることもできる ただしエスケープのバックスレッシュは使えない
+            var hokan = $@"
+                verbatim (here) string
+                {tStr},{tStr2},{tStr3}
+            ";
+
+            // name of 演算子
+            // name ofを使うことでClassやMethodなどの名前を文字として取得することができる
+            var name1 = nameof(Program);
+            Console.WriteLine(name1); // -> Program
+
+            // https://ufcpp.net/study/csharp/st_string.html?p=2
+            // 生成文字リテラル
+
+            // var tStr4 = """ aaa """;
+
+            // 算術演算子
+
+            byte a = 11 + 92; // 103
+            int b = 9 - 4; // 5
+            int c = 3 * 7; // 21
+            int d = 9 / 2; // 4 (あまりは切り捨て)
+            double e = 9.0 / 2.0; // 4.5
+            int f = 9 % 2; // 1 (あまりを算出)
+            int g = +1; // 1をそのまま
+            int h = -g; // gの符号反転（マイナス)
 
 
             Console.WriteLine("Program end.");
