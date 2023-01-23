@@ -114,6 +114,24 @@ namespace HelloWorld
             int g = +1; // 1をそのまま
             int h = -g; // gの符号反転（マイナス)
 
+            // インクリメント デクリメント
+
+            // 前置きインクリメント
+            int i = 0;
+            int i2 = ++i; // i2 は 1, i も1 になる
+
+            // 後置きインクリメント
+            int i3 = 0;
+            int i4 = i3++; // i4は1、i3は0；
+
+            // 前置きデクリメント
+            int i5 = 0;
+            int i6 = --i5; // i6とi5は-1になる
+
+            // 後置きデクリメント
+            int i7 = 0;
+            int i8 = i7--; // i8は-1,i7 は 0 になる
+
 
             Console.WriteLine("Program end.");
         }
