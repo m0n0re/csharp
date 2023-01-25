@@ -136,6 +136,14 @@ namespace HelloWorld
             // += -= *= /= &= |= ^= 
             // a += 1 は aに+1したものが代入される。他も同じ
 
+            // null 合体演算子??
+
+            string str1 = null;
+            string str2 = str1 ?? "null"; // param1がnullなら文字列”null”をセットする
+
+            // C#8から合体代入もできる
+            // string str1 ??= "null";
+
 
             Console.WriteLine("Program end.");
         }
