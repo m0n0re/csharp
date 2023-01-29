@@ -6,6 +6,13 @@ namespace HelloWorld
 {
     class Program
     {
+        // getter ,setter
+        // c# 2.0以前ではgetter , setterを書く必要があったが3.0からは自動で作ってくれるようになった
+        public double re { get; set; }
+
+        // c# 6.0 ではgetだけの定義もできるようになった。コンストラクタでセットした後、以降は書き換え不可となる
+        public string Im { get; }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Program Srart");
@@ -148,6 +155,12 @@ namespace HelloWorld
             // size of は型が何バイトのメモリを占めるかを返す
             // int なら　4バイト、byteなら1バイト。
 
+
+            // 定数 constant
+            const int CON_NUM = 5;
+
+
+            
 
             Console.WriteLine("Program end.");
         }
