@@ -144,6 +144,10 @@ namespace HelloWorld
             // C#8から合体代入もできる
             // string str1 ??= "null";
 
+            // size of 演算子
+            // size of は型が何バイトのメモリを占めるかを返す
+            // int なら　4バイト、byteなら1バイト。
+
 
             Console.WriteLine("Program end.");
         }
