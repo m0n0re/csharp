@@ -15,9 +15,11 @@ namespace HelloWorld
         public int Y { get; init; }
     }
 
-    class Point2 {
+    class Point2
+    {
         public int X { get; }
         public int Y { get; }
+    }
 
     class Program
     {
@@ -30,6 +32,14 @@ namespace HelloWorld
 
         // c# 6.0 プロパティ初期化子 初期化もできる
         public string hi { get; set; } = "hi";
+
+        // read only
+        // constとの違い
+        // クラスのメンバー変数のみ
+        // static 有無の変更可能
+        // コンストラクタで変更可能
+        // コンパイル結果は変数と同じ
+        // new ができる
 
         static void Main(string[] args)
         {
@@ -186,8 +196,6 @@ namespace HelloWorld
             // 定数 constant
             const int CON_NUM = 5;
 
-
-            
 
             Console.WriteLine("Program end.");
         }
