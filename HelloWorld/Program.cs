@@ -4,6 +4,21 @@ using System.Runtime.InteropServices;
 
 namespace HelloWorld
 {
+    class Point
+    {
+        // c# 9.0 set の代わりに init というものを定義できる。
+        // init は ３つの特徴がある
+        // 1.オブジェクト初期化子で書き換えが可能
+        // 2.他のinitアクセサで書き換えが可能
+        // 3.with式での書き換えが可能
+        public int X { get; init; }
+        public int Y { get; init; }
+    }
+
+    class Point2 {
+        public int X { get; }
+        public int Y { get; }
+
     class Program
     {
         // getter ,setter
@@ -13,9 +28,21 @@ namespace HelloWorld
         // c# 6.0 ではgetだけの定義もできるようになった。コンストラクタでセットした後、以降は書き換え不可となる
         public string Im { get; }
 
+        // c# 6.0 プロパティ初期化子 初期化もできる
+        public string hi { get; set; } = "hi";
+
         static void Main(string[] args)
         {
             Console.WriteLine("Program Srart");
+
+            // initを使ってるので new したタイミングでXYに初期値を与えることができる
+            var p = new Point { X = 1, Y = 1 };
+
+            // initなので値を変更することはできずコンパイルエラーになる
+            //p.X = 2;
+            
+            // 
+            // var p2 = new Point2 { X=1,Y=1};
 
             // 文字入力を読み取るにはConsole.ReadLine()を使う
             // String str = Console.ReadLine();
